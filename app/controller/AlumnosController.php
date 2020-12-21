@@ -52,7 +52,7 @@ Class AlumnosController extends Alumnos{
 				$this->PersonasModel->_telefono = $_POST['tel'];
 				$this->PersonasModel->_nacimiento = $_POST['nac'];
 				// insertamos en la tabla personas y recuperamos el último id cargado.
-				$idPer = $this->PersonasModel->store($conn);
+				$idPer = $this->PersonasModel->storePersona($conn);
 
 				$this->AlumnosModel->_id_persona = intval($idPer[0]);
 				$this->AlumnosModel->_escuela = $_POST['esc'];
@@ -223,7 +223,7 @@ Class AlumnosController extends Alumnos{
 			  $conn->db->startTrans();
 
 				$this->AlumnosModel->_id = $_POST['id_alumno'];
-				$this->AlumnosModel->eliminar($conn);
+				$this->AlumnosModel->eliminarAlumno($conn);
 
 			 $conn->db->completeTrans();
 

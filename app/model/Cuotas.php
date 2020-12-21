@@ -123,7 +123,7 @@
 
  	}
 
- 	public function pagar($conn){
+ 	public function pagarCuota($conn){
 
  		try {
 
@@ -238,6 +238,9 @@
 			$filas = $this->DB->Execute($sql,array($desde,$hasta));
 
 			return $filas;
+
+			// var_dump($filas);
+			// exit();
 
 
  		} catch (Exception $e) {

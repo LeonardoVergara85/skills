@@ -107,7 +107,7 @@
  		$this->DB = $database->db;
  	}
 
- 	public function store($conn){
+ 	public function storePersona($conn){
 
  		try {
  			

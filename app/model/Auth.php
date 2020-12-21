@@ -36,14 +36,14 @@ class Auth
  			 * Buscar USUARIO
  			 */
  			$usernme = $this->_username;
- 			$pass = $this->_password;
+			 $pass = $this->_password;
+			 
 			$sql = "SELECT * FROM USUARIOS_VW WHERE USERNAME = ? AND PASS = ?";	
 
  			$this->DB->SetFetchMode(ADODB_FETCH_ASSOC);
  			
 			$usuario = $this->DB->Execute($sql,array($usernme,$pass));
 
-			
 
 			if( empty($usuario->fields['username']) ){
 

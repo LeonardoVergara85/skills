@@ -9,6 +9,7 @@ $(document).ready(function() {
             var pass = $('#password').val();
             
 
+            
             $('#ingresarLogueo').attr('disabled','disabled');
 
             $.ajax({
@@ -23,6 +24,7 @@ $(document).ready(function() {
 
               },
               success: function (resp) {
+
 
                 if(resp == 'ok'){
         
